@@ -93,4 +93,22 @@ public class TestBillboardManager {
 
         Assertions.assertArrayEquals(new String[]{film10, film9}, manager.findLast());
     }
+
+    @Test
+    public void showTenPostersFromEnd() {
+
+        BillboardManager manager = new BillboardManager(10);
+        manager.addPoster(film1);
+        manager.addPoster(film2);
+        manager.addPoster(film3);
+        manager.addPoster(film4);
+        manager.addPoster(film5);
+        manager.addPoster(film6);
+        manager.addPoster(film7);
+        manager.addPoster(film8);
+        manager.addPoster(film9);
+        manager.addPoster(film10);
+
+        Assertions.assertArrayEquals(new String[]{film10, film9, film8, film7, film6, film5, film4, film3, film2, film1}, manager.findLast());
+    }
 }

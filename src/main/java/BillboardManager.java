@@ -14,9 +14,7 @@ public class BillboardManager {
 
         int length = poster.length + 1;
         String[] tmp = new String[length];
-        for (int i = 0; i < poster.length; i++) {
-            tmp[i] = poster[i];
-        }
+        System.arraycopy(poster, 0, tmp, 0, poster.length);
         int lastPoster = tmp.length - 1;
         tmp[lastPoster] = post;
         poster = tmp;
